@@ -1,0 +1,13 @@
+# Ignore the Python virtual environment
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Ignore local database and uploaded files
+tracker.db
+instance/
+uploads/
+
+# Ignore system files
+.DS_Store

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Log Incident</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body style="background-color: #0d1117; color: white; font-family: sans-serif; padding: 50px;">
+
+    <h2>🚨 Log New Security Incident</h2>
+    
+    <form action="/report" method="POST" style="background: #161b22; padding: 20px; border-radius: 8px;">
+        <label>Incident Title:</label><br>
+        <input type="text" name="title" required style="width: 100%; margin-bottom: 10px;"><br>
+        
+        <label>Severity:</label><br>
+        <select name="severity" style="width: 100%; margin-bottom: 10px;">
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+            <option value="Critical">Critical</option>
+        </select><br>
+        
+        <label>Description / Notes:</label><br>
+        <textarea name="description" rows="5" required style="width: 100%; margin-bottom: 10px;"></textarea><br>
+        
+        <button type="submit" style="background: #238636; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">
+            Save Incident
+        </button>
+    </form>
+    
+    <br>
+    <a href="/" style="color: #58a6ff;">Back to Dashboard</a>
+
+</body>
+</html>
